@@ -1,2 +1,7 @@
-# agenda
-Agenda telefônica usando Laravel
+# Agenda Telefônica
+* Laravel
+* MVC
+* Javascript
+* Bootstrap
+* MySQL
+
