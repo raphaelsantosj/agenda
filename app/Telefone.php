@@ -9,9 +9,14 @@ class Telefone extends Model
     protected $fillable = [
     	'id',
     	'ddd',
-    	'fone',
+    	'telefone',
     	'pessoa_id'
     ];
 
     protected $table = 'telefones';
+
+    public function pessoa()
+    {
+    	return $this->belongsTo(Pessoa::class, 'pessoa_id');
+    }
 }
