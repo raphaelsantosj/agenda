@@ -16,4 +16,15 @@ class PessoasController extends Controller
 		]);
 	}
 
+	public function adicionarView()
+	{
+		return view('pessoas.create');
+	}
+
+	public function store(Request $request)
+	{
+		Pessoa::create($request->all());
+		return redirect("/pessoas")->with("message", "`Pessoa criada com sucesso!");
+	}
+
 }
