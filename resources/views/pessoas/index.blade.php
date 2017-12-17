@@ -6,6 +6,10 @@
 			padding: 5px;
 			float: right;
 		}
+		.btn-danger {
+			padding: 5px;
+			float: right;
+		}
 	</style>
 	<div>
 		@foreach($pessoas as $pessoa)
@@ -13,6 +17,9 @@
 				<div class="panel panel-info">
 				  <div class="panel-heading">
 				  		{{ $pessoa->nome }}
+				  		<a href='{{ url("/pessoas/$pessoa->id/excluir") }}' class="btn btn-xs btn-danger">
+				  			<i class="glyphicon glyphicon-trash"></i>
+				  		</a>
 				  		<a href='{{ url("/pessoas/$pessoa->id/editar") }}' class="btn btn-xs btn-action">
 				  			<i class="glyphicon glyphicon-pencil"></i>
 				  		</a>
